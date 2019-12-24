@@ -16,9 +16,11 @@ if (!empty($_GET)) {
     extract($_GET);
     if (isset($action)) {
         switch ($action) {
-                // case 'inscription':
-                //     $member->inscription();
-                //     break;
+            case 'home':
+                $car->carsView();
+                case 'inscription':
+                    $member->inscription();
+                    break;
             case 'signup':
                 require 'view/inscription.php';
                 break;
